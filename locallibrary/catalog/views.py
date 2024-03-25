@@ -33,9 +33,19 @@ from django.views import generic
 
 class BookListView(generic.ListView):
     """Generic class-based view for a list of books."""
+
     model = Book
     paginate_by = 5
 
 
 class BookDetailView(generic.DetailView):
     model = Book
+
+
+class AuthorListView(generic.ListView):
+    model = Author
+    paginate_by = 3
+
+
+class AuthorDetailView(generic.DetailView):
+    model = Author
